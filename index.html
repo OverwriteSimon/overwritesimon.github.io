@@ -101,11 +101,13 @@ if (markerFound == 1) {
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
-<a-marker id="marker" preset="hiro" emitevents="true" button>
+<a-marker id="marker" type="pattern" preset="custom" src="pattern-bok_logo.patt" url="pattern-bok_logo.patt" emitevents="true" button>
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
-<a-box width="0.3" height="0.3" depth="0.3" class="intersectable" position="0 0.25 0" rotation="0 -270 0" color="#FF0000" 
+<a-box width="0.3" height="0.3" depth="0.1" class="intersectable" position="0 0.3 -0.05" rotation="0 0 0" color="#FF0000" 
+></a-box>
+<a-box width="0.3" height="0.3" depth="0.1" class="intersectable" position="0 0.3 0.05" rotation="0 0 0" color="#000000" 
 ></a-box>
 <!-- END: Unity Compiled Objects -->
 
