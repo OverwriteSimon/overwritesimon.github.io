@@ -1,17 +1,21 @@
-index.html
+DELETE THIS FILE BEFORE DELIVERING PACKAGES
+
+File Structure for AR.js marketing product 
+
+Index.html
 src
- ┣ assets
- ┃ ┣ itshighnoon.ogg
- ┃ ┣ mccree-base-spinner.png
- ┃ ┣ mccree.gltf
- ┃ ┣ overwatch-logo.png
- ┃ ┗ scene.bin
- ┣ js
+ ┣ assets               - project asset files
+ ┃ ┣ audio
+ ┃ ┣ particles
+ ┃ ┣ models
+ ┃ ┣ images
+ ┃ ┗ binary files
+ ┣ js                   - javascript files
  ┃ ┣ app.js
  ┃ ┗ arjs-highnoon.js
- ┗ patterns
- ┃ ┣ pattern-01-printable.pdf
- ┃ ┣ pattern-01.png
- ┃ ┗ pattern-01.patt
+ ┗ patterns             - image pattern files
+ ┃ ┣ image pattern printable.pdf
+ ┃ ┣ image pattern .patt
+ ┃ ┗ image pattern .png
  dist
  ┗ bundle.js
