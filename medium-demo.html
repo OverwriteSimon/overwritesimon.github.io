@@ -8,7 +8,23 @@
  
 
   <!--Custom Script to play sound-->
-  
+  <script>
+  AFRAME.registerComponent('audiohandler', {
+    init:function() {
+       let playing = false;
+       let audio = document.querySelector("#audio");
+       this.el.addEventListener('click', () => {
+            if(!playing) {
+                audio.play();
+             } else {
+                audio.pause();
+                audio.currentTime = 0;
+             }
+             playing = !playing;
+       });
+    }
+  })
+  </script>
 
 <audio id="sound" crossorigin="anonymous" preload="auto" src="/audio/jackpot.wav"></audio>
 
@@ -21,7 +37,7 @@
         animation__rotate = "property: rotation; dur: 4000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
         >
         
-        <a-entity 
+        <a-entity audiohandler
         color="FF0000"
         rotation="0 90 0"
         position=".1 1 0" 
@@ -30,7 +46,7 @@
         clickhandler="txt:POS"
         ></a-entity>
 
-        <a-entity 
+        <a-entity audiohandler
         color="FFFFFF"
         rotation="0 90 0"
         position="-.1 1 0" 
