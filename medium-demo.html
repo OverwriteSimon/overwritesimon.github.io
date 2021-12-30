@@ -7,27 +7,7 @@
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
  
 
-  <!--Custom Script to play sound-->
-  <script>
-  AFRAME.registerComponent('audiohandler', {
-    init:function() {
-       let playing = false;
-       let audio = document.querySelector("#audio");
-       this.el.addEventListener('click', () => {
-            if(!playing) {
-                audio.play();
-             } else {
-                audio.pause();
-                audio.currentTime = 0;
-             }
-             playing = !playing;
-       });
-    }
-  })
-  </script>
-
-<audio id="sound" crossorigin="anonymous" preload="auto" src="/audio/jackpot.wav"></audio>
-
+  
   <head>DEC 30 4:45</head>
   
   <body style="margin : 0px; overflow: hidden;">
