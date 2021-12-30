@@ -12,7 +12,8 @@
     <a-scene embedded arjs>
       <a-marker preset="hiro">
         <a-entity
-            animation="property: position;from:0 0 0; to: 0 0.4 0ß; dur: 2000; easing: linear; loop: true"
+            animation__mouseenter="property: position; from:0 0 0; to: 0 0.4 0; dur: 2000; easing: easeInSine; loop: true";
+            animation__mouseleave="property: position; from:0 0.4 0; to: 0 0 0; dur: 2000; easing: easeInSine; loop: true";
         >
             <a-entity 
                 rotation="90 0 0"
