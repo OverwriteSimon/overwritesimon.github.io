@@ -8,20 +8,9 @@
  
 
   <!--Custom Script to play sound-->
-  <script>
-    AFRAME.registerComponent('clickhandler', {
-            schema: {
-              txt: {default:'default'}
-            },        
-            init: function () {
-              var data = this.data;
-              var el = this.el;        
-              el.addEventListener('click', function () {            
-               console.log(data.txt);
-              });        
-            }
-          });
-    </script>
+  
+
+<audio id="sound" crossorigin="anonymous" preload="auto" src="/audio/jackpot.wav"></audio>
 
   <head>DEC 30 4:34</head>
   
