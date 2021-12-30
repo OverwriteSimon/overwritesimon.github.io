@@ -6,7 +6,23 @@
   <!--Particle system import-->
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
  
-  
+
+  <!--Custom Script to play sound-->
+  <script>
+    AFRAME.registerComponent('clickhandler', {
+            schema: {
+              txt: {default:'default'}
+            },        
+            init: function () {
+              var data = this.data;
+              var el = this.el;        
+              el.addEventListener('click', function () {            
+               console.log(data.txt);
+              });        
+            }
+          });
+    </script>
+
   <head>DEC 30 3:37</head>
   
   <body style="margin : 0px; overflow: hidden;">
@@ -19,17 +35,19 @@
         <a-entity 
         color="FF0000"
         rotation="0 90 0"
-        position=".1 .1 0" 
+        position=".1 1 0" 
         scale="0.5 0.5 0.5" 
         gltf-model="url(/models/BOK_Logo_Solid_POS.glb)"
+        clickhandler="entity:POS"
         ></a-entity>
 
         <a-entity 
         color="FFFFFF"
         rotation="0 90 0"
-        position="-.1 .1 0" 
+        position="-.1 1 0" 
         scale="0.5 0.5 0.5" 
         gltf-model="url(/models/BOK_Logo_Solid_NEG.glb)"
+        clickhandler="entity:NEG"
         ></a-entity>
             
         </a-entity>
