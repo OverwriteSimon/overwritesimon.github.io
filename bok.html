@@ -11,14 +11,16 @@
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
       <a-marker preset="hiro">
-        <a-entity>
+        <a-entity
+            animation="property: position;from:0 0 0; to: 0 0.4 0ß; dur: 2000; easing: linear; loop: true"
+        >
             <a-entity 
-            rotation="90 0 0"
-            position="0 .1 0" 
-            scale="0.5 0.5 0.5" 
-            gltf-model="url(/models/bok.glb)"
-            animation__rotate = "property: rotation; dur: 4000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
-        </a-entity>
+                rotation="90 0 0"
+                position="0 .1 0" 
+                scale="0.5 0.5 0.5" 
+                gltf-model="url(/models/bok.glb)"
+                animation__rotate = "property: rotation; dur: 4000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
+            </a-entity>
 
             </a-entity>
             
