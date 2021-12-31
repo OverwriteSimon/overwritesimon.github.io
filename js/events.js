@@ -1,10 +1,9 @@
 AFRAME.registerComponent('markerhandler', {
 
     init: function() {
-        const animatedMarker = document.querySelector("#bok-marker");
-        const aEntity = document.querySelector("#Logo-Parent");
+        const animatedMarker = document.querySelector("#animated-marker");
+        const aEntity = document.querySelector("#animated-model");
 
-        console.log("CLicked markerhandler")
         // every click, we make our model grow in size :)
         animatedMarker.addEventListener('click', function(ev, target){
             const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
@@ -14,13 +13,4 @@ AFRAME.registerComponent('markerhandler', {
                 aEntity.setAttribute('scale', scale);
             }
         });
-}});
-
-AFRAME.registerComponent('clickhandler', {
-
-    init: function() {
-        const animatedMarker = document.querySelector("#bok-marker");
-        const aEntity = document.querySelector("#Logo-Parent");
-
-        console.log("CLicked clickhandler")
 }});
