@@ -6,27 +6,29 @@
   <!--Particle system import-->
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
  
-
+  <!--events import-->
+  <script src="/js/events.js"></script>
   
   <head>DEC 30 4:45</head>
   
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-marker preset="hiro">
-        <a-entity
+      <a-marker id="bok-marker" preset="hiro" emitevents="true" cursor="rayOrigin: mouse">
+        <a-entity id="Logo-Parent"
         animation__rotate = "property: rotation; dur: 4000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
         >
         
-        <a-entity audiohandler
+        <a-entity markerhandler
         color="FF0000"
         rotation="0 90 0"
         position=".1 1 0" 
         scale="0.5 0.5 0.5" 
         gltf-model="url(/models/BOK_Logo_Solid_POS.glb)"
         clickhandler="txt:POS"
+        id="Logo-pos"
         ></a-entity>
 
-        <a-entity audiohandler
+        <a-entity audiohandler 
         color="FFFFFF"
         rotation="0 90 0"
         position="-.1 1 0" 
