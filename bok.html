@@ -7,11 +7,12 @@
   <!--Particle system import-->
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-  
+  <!--event import-->
+  <script src="/js/events.js"></script>
   
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-marker preset="hiro">
+      <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
         <a-entity
         animation__rotate = "property: rotation; dur: 4000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
         
