@@ -8,21 +8,26 @@
   <!--Particle system import-->
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-  <!--event import-->
-  <script src="/js/events.js"></script>
+  
 
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-marker id="#marker" markerhandler emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
+      <a-marker id="marker"  emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
         <a-entity position="0 1.5 0"
         animation__rotate = "property: rotation; dur: 4000; easing: linear; dir: normal; from:-90 0 0; to: -90 360 0; loop: true;">
         
-            <a-entity  
+            <a-entity  id="bok-model"
                 scale="0.25 0.25 0.25" 
                 gltf-model="url(/models/rising-bok.glb)"
                 animation-mixer
                 >
-                <a-entity position="0 .5 0" particle-system="enabled:true;preset:star; velocityValue:0 .1 0; texture:/images/money.png; color: #FFFFFF" ></a-entity>
+                <a-entity id="bok-particles"  position="0 .5 0" particle-system=
+                "enabled:false; 
+                preset:star; 
+                velocityValue:0 .1 0; 
+                texture:/images/money.png; 
+                color: #FFFFFF" 
+                ></a-entity>
             </a-entity>
 
             </a-entity>
