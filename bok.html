@@ -15,7 +15,7 @@
     <a-scene embedded arjs>
       <a-marker markerhandler
       id="#marker"  emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
-        <a-entity position="0 1.5 0"
+        <a-entity  scale="3 3 3" position="0 1.5 0"
         animation__rotate = "property: rotation; dur: 4000; easing: linear; dir: normal; from:-90 0 0; to: -90 360 0; loop: true;">
         
             <a-entity  id="bok-model"
@@ -28,9 +28,9 @@
                 preset:star; 
                 velocityValue:0 .1 0; 
                 texture:/images/money.png; 
-                color: #FFFFFF
-                particleCount:50
-                duration: 0.5" 
+                color: #FFFFFF;
+                particleCount:500;
+                duration: 5;" 
                 
                 ></a-entity>
             </a-entity>
