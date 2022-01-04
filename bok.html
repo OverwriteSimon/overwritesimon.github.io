@@ -9,17 +9,8 @@
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   
-  <script src="js/eventlibrary.js"></script>
+  <script defer src="js/eventlibrary.js"></script>
   
-<script defer>
-  console.log("Hello world!");
-  
-  document.addEventListener('DOMContentLoaded',() => {
-    // handle load event
-    particleSystem = document.getElementById("bok-particles");
-  
-  });
-  </script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
       <a-marker markerhandler
@@ -37,7 +28,10 @@
                 preset:star; 
                 velocityValue:0 .1 0; 
                 texture:/images/money.png; 
-                color: #FFFFFF" 
+                color: #FFFFFF
+                particleCount:50
+                duration: 0.5" 
+                
                 ></a-entity>
             </a-entity>
 
