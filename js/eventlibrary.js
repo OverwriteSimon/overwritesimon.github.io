@@ -10,7 +10,8 @@ function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
 
-function particleSequence() {
+function particleSequence() 
+{
   delay(9000).then(() => {
     particlesFlow = true;
     console.log("Playing Audio");
@@ -22,7 +23,6 @@ function particleSequence() {
     particlesFlow = false;
     element.setAttribute("particle-system",'enabled',particlesFlow);
     console.log("Pause Audio");
-    //audio.pause();
   });
 }
 
