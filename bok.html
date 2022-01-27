@@ -2,25 +2,26 @@
 
 <html>
   
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <!-- we import arjs version without NFT but with marker + location based support -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <!--Particle system import-->
-  <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+
+
+
   <script defer src="js/eventlibrary.js"></script>
-  <script src="js/clickevent.js"></script>
 
   <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
-      <a-marker bokclickhandler
-      id="bok-marker"  emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
+    <a-scene embedded arjs raycaster="objects: [bokclickhandler];">
+      <a-marker markerhandler button
+      id="#marker"  emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
         <a-entity  scale="1 1 1" position="0 1.5 0" rotation="-90 0 0">
         
-            <a-entity  id="bok-model"bokclickhandler
+            <a-entity  id="bok-model"
                 scale="0.25 0.25 0.25" 
-                gltf-model="url(/models/rising-bok2.glb)"
+                gltf-model="url(/models/rising-bok.glb)"
                 animation-mixer
                 >
 
@@ -30,8 +31,9 @@
                 velocityValue:0 .1 0; 
                 texture:/images/money.png; 
                 color: #FFFFFF;
-                particleCount:500;
-                duration: 5;" 
+                particleCount:200;
+                duration: 5;
+                positionSpread: .5 .5 .5;" 
                 
                 ></a-entity>
             </a-entity>

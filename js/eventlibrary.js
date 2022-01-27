@@ -1,8 +1,16 @@
 let audio = new Audio(".//audio/jackpot.wav")
 
-
 element = document.getElementById("bok-particles");
 
+AFRAME.registerComponent('bokclickhandler', {
+  init: function () {
+    this.el.addEventListener('click', () => {
+      // When the model is clicked, begin animation event
+      console.log("CLicked");
+      audio.play();
+    });
+  },
+});
 
 let particlesFlow=true;
 
@@ -14,7 +22,7 @@ function particleSequence() {
   delay(9000).then(() => {
     particlesFlow = true;
     console.log("Playing Audio");
-    //audio.play();
+    audio.play();
     element.setAttribute("particle-system",'enabled',particlesFlow);
   });
 
