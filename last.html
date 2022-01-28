@@ -7,11 +7,11 @@
 <script defer src="js/buttonclick.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-<a-scene buttonclickcomponent embedded arjs='debugUIEnabled: true; sourceType: webcam' vr-mode-ui='enabled: false' >
-<a-marker id="marker" preset="hiro" emitevents="true" >
+<a-scene embedded arjs='debugUIEnabled: true; sourceType: webcam' vr-mode-ui='enabled: false' raycaster="objects: [buttonclickcomponent];">
+<a-marker cursor="rayOrigin: mouse" id="marker" preset="hiro" emitevents="true" >
 
-<a-box  position='0 0.5 0' ></a-box>
-		
+<a-box buttonclickcomponent position='0 0.5 0'></a-box>
+
 </a-marker>
 <a-entity camera></a-entity>
 </a-scene>
