@@ -11,3 +11,10 @@ AFRAME.registerComponent('buttonclickcomponent', {
       });
     },
   });
+
+
+  document.querySelector("#press-here")
+        .addEventListener('click', (evt) => {              
+            console.log("CLicked");
+            audio.play();          
+        })   
