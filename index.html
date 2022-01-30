@@ -19,12 +19,9 @@
     </div>
 
     <a-scene buttonComponent embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
-        <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;">
+        <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
 
 
-            <a-assets>
-
-            </a-assets>
         </a-entity id="bok-model" scale="0.25 0.25 0.25"
         gltf-model="url(/src/assets/models/Bok_Briefcase_Rigged.glb)"
         animation-mixer="clip:Rotation">
