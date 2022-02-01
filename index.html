@@ -19,12 +19,16 @@
     </div>
 
     <a-scene buttonComponent embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
+        
+    <a-assets>
+        <a-asset-item id="bok-item" src="src/assets/models/cyl.glb"></a-asset-item>
+	</a-assets>
+
         <a-marker button id="#marker" emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
             
         <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
 
-        </a-entity id="bok-model"
-        gltf-model="url(src/assets/models/cyl.glb)"></a-entity>
+        </a-entity id="bok-model" gltf-model="#bok-item"></a-entity>
         <a-box opacity="0.2"></a-box>
     </a-marker>
     <a-entity camera></a-entity>
