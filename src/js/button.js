@@ -1,14 +1,16 @@
 let allow_clicks = false;
 
-console.log("3:30PM");
+console.log("3:42PM");
 
 document.querySelector("#scene")
       .addEventListener('markerFound', (evt) => {
+                console.log("Enabling Click Events")
                allow_clicks = true
       })
 
 document.querySelector("#scene")
       .addEventListener('markerLost', (evt) => {
+                console.log("Disabling Click Events")
                 allow_clicks = false
       }) 
 
