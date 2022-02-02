@@ -18,14 +18,14 @@
        
     </div>
 
-    <a-scene buttonComponent embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
+    <a-scene id="scene" buttonComponent embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
         
 
         <a-marker button id="#marker" emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
             
         <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
 
-        <a-entity rotation="90 0 0" gltf-model="url(/src/assets/models/Bok_Briefcase_Rigged.glb)"animation-mixer="clip:Rotation"></a-entity>
+        <a-entity id="click-here"rotation="-90 0 0" gltf-model="url(/src/assets/models/Bok_Briefcase_Rigged.glb)"animation-mixer="clip:Rotation"></a-entity>
         <a-box opacity="0.20"></a-box>
     </a-marker>
     <a-entity camera></a-entity>
