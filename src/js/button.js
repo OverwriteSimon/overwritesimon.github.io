@@ -14,7 +14,7 @@ document.querySelector("#scene")
                 allow_clicks = false
       }) 
 
-document.querySelector("#press-here")
+document.querySelector("#click-here")
       .addEventListener('click', (evt) => {
            if (allow_clicks){
                console.log("Click detected: redirecting.")
