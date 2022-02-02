@@ -1,6 +1,6 @@
 let allow_clicks = false;
 
-console.log("3:42PM");
+console.log("3:52PM");
 
 document.querySelector("#scene")
       .addEventListener('markerFound', (evt) => {
