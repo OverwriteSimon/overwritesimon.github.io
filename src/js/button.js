@@ -1,11 +1,14 @@
-let allow_clicks = false;
-console.log("4:00PM");
-let crossFadeDuration=".5f"
-
-let bok = document.getElementById("click-here")
-
+const crossFadeDuration=".5f"
 const particleSystem = document.getElementById('particle-system');
-particleSystem.components['particle-system'].startParticles();
+
+
+let allow_clicks = false;
+const bok = document.getElementById("click-here")
+
+
+//bok.setAttribute("gltf-model","src/assets/models/Cone.glb")
+
+
 
 document.querySelector("#scene")
       .addEventListener('markerFound', (evt) => {
@@ -24,11 +27,15 @@ document.querySelector("#click-here")
            if (allow_clicks)
            {
                  allow_clicks=false;
-               bok.setAttribute("animation-mixer",{clip:"RiseAndOpen",crossFadeDuration:crossFadeDuration,startFrame:"0"})
-               
+               bok.setAttribute("animation-mixer",{clip:"RiseAndOpen",crossFadeDuration:crossFadeDuration,startFrame:0})
+               setTimeout(() => {
+                     particleSystem.components['particle-system'].startParticles();
+                  }, 200);
+
                setTimeout(() => {
                      allow_clicks=true;
-                  bok.setAttribute("animation-mixer",{clip:"Rotation",crossFadeDuration:crossFadeDuration})
-               }, 3000);
+                        bok.setAttribute("animation-mixer",{clip:"Rotation",crossFadeDuration:crossFadeDuration})
+                        particleSystem.components['particle-system'].stopParticles();
+               }, 2500);
            }            
       })   
