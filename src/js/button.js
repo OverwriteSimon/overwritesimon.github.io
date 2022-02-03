@@ -19,10 +19,10 @@ document.querySelector("#click-here")
            if (allow_clicks)
            {
                  allow_clicks=false;
-               bok.setAttribute("animation-mixer",{clip:"RiseAndOpen"})
+               bok.setAttribute("animation-mixer",{clip:"RiseAndOpen",crossFadeDuration:".1"})
                setTimeout(() => {
                      allow_clicks=true;
-                  bok.setAttribute("animation-mixer",{clip:"Rotation"})
+                  bok.setAttribute("animation-mixer",{clip:"Rotation",crossFadeDuration:".1"})
                }, 2000);
            }            
       })   
