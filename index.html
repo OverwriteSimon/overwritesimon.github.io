@@ -25,8 +25,23 @@
             
         <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
 
-        <a-entity id="click-here"rotation="-90 0 0" gltf-model="url(/src/assets/models/Bok_Briefcase_Rigged.glb)"animation-mixer="clip:Rotation;crossFadeDuration:.1"></a-entity>
+        <a-entity id="click-here"rotation="-90 0 0" gltf-model="url(/src/assets/models/Bok_Briefcase_Rigged.glb)"animation-mixer="clip:Rotation;crossFadeDuration:.1">
+            <a-entity id="particle-system"  position="0 .5 0" particle-system=
+                "enabled:true; 
+                preset:star; 
+                velocityValue:0 .1 0; 
+                texture: src/assets/images/100 dollar bills.png;
+                color: #FFFFFF;
+                particleCount:50;
+                duration: 0.5; 
+                color: #FFFFFF;
+                particleCount:500;
+                duration: 5;" 
+                
+                ></a-entity>
+        </a-entity>
     </a-marker>
     <a-entity camera></a-entity>
     </a-scene>
 </body>
+<!--texture: src/assets/images/100 dollar bills.png;-->
