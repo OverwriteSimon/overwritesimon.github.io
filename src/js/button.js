@@ -34,7 +34,7 @@ document.querySelector("#click-here")
            {
                   //disable clicks, then play the RiseAndOpen animation clip
                   allow_clicks=false;
-                  bok.setAttribute("animation-mixer",{clip:"RiseAndOpen",crossFadeDuration:crossFadeDuration,startFrame:0})
+                  bok.setAttribute("animation-mixer",{clip:"RiseAndOpen",crossFadeDuration:crossFadeDuration})
                //after 200ms, activate the money particles
                setTimeout(() => {
                      particleSystem.components['particle-system'].startParticles();
@@ -42,7 +42,7 @@ document.querySelector("#click-here")
 
                   //after 2.5 seconds, stop the particles, and return to Rotation Animation
                setTimeout(() => {
-                        bok.setAttribute("animation-mixer",{clip:"Rotation",crossFadeDuration:crossFadeDuration,startFrame:0})
+                        bok.setAttribute("animation-mixer",{clip:"Rotation",crossFadeDuration:crossFadeDuration})
                         particleSystem.components['particle-system'].stopParticles();
                }, 2500);
                   //after 3 seconds, go to the bok website
