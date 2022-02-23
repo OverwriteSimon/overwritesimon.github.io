@@ -45,6 +45,7 @@ document.querySelector("#click-here")
                      allow_clicks=true;
                         bok.setAttribute("animation-mixer",{clip:"Rotation",crossFadeDuration:crossFadeDuration,startFrame:0})
                         particleSystem.components['particle-system'].stopParticles();
+                        window.location.replace("http://www.w3schools.com");
                }, 2500);
            }            
       })   
