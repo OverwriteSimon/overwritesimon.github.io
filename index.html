@@ -7,6 +7,7 @@
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
 <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+<script src="https://github.com/n5ro/aframe-extras/blob/master/src/loaders/animation-mixer.js"
 
 
 
@@ -21,7 +22,7 @@
     <a-scene id="scene" buttonComponent embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
         
 
-        <a-marker button id="marker" emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
+        <a-marker button id="marker" emitevents="true" cursor="rayOrigin: mouse" patternUrl="src/assets/ImageTarget/pattern-bank-of-oklahoma-logo.patt">
             
         <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
 
