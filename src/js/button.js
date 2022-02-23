@@ -42,10 +42,12 @@ document.querySelector("#click-here")
 
                   //after 2.5 seconds, stop the particles, and return to Rotation Animation
                setTimeout(() => {
-                     allow_clicks=true;
                         bok.setAttribute("animation-mixer",{clip:"Rotation",crossFadeDuration:crossFadeDuration,startFrame:0})
                         particleSystem.components['particle-system'].stopParticles();
-                        window.location.replace("http://www.w3schools.com");
                }, 2500);
+                  //after 3 seconds, go to the bok website
+                  setTimeout(() => {
+                        window.location.replace("https://www.bankofoklahoma.com/");
+                  }, 3000);
            }            
       })   
