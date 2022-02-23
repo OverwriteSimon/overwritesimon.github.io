@@ -5,7 +5,7 @@ const particleSystem = document.getElementById('particle-system');
 let allow_clicks = false;
 const bok = document.getElementById("click-here")
 
-
+console.log("4:01");
 //bok.setAttribute("gltf-model","src/assets/models/Cone.glb")
 
 
