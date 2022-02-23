@@ -28,6 +28,7 @@ document.querySelector("#scene")
 //Bok Event Sequence Begins here
 document.querySelector("#click-here")
       .addEventListener('click', (evt) => {
+            console.log("Click Detected. Event Sequence Begins.")
             // Check To confirm if logo is interactable
            if (allow_clicks)
            {
