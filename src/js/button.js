@@ -40,6 +40,7 @@ document.querySelector("#click-here")
             // Check To confirm if logo is interactable
            if (allow_clicks)
            {
+                 console.log("Calling NextItem()");
                  NextItem();
            }            
       })   
