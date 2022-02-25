@@ -20,7 +20,6 @@
 
     <a-scene id="scene" buttonComponent embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
         
-
         <a-marker button id="marker" emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
             
         <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
@@ -35,12 +34,11 @@
                 velocityValue:0 .1 0; 
                 texture: src/assets/images/money.png;
                 color: #FFFFFF;
-                particleCount:50;
                 duration: 0.5; 
                 color: #FFFFFF;
                 particleCount:500;
-                duration: 5;" 
-                
+                duration: 5;
+                positionSpread: 10 10 10" 
                 ></a-entity>
         </a-entity>
     </a-marker>
