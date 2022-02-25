@@ -12,7 +12,9 @@ bok.setAttribute("gltf-model","src/assets/models/Cone.glb");
 
 function NextItem(){
       index = index++%count
-      bok.setAttribute("gltf-model","src/assets/models/"+items[index]);
+      let model = "src/assets/models/"+items[index];
+      console.log("Set Model To: "+model)
+      bok.setAttribute("gltf-model",model);
 }
 
 //This allows clicks when the camera detects the marker
