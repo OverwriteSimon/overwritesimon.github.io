@@ -11,7 +11,7 @@ const count = items.length;
 bok.setAttribute("gltf-model","src/assets/models/Cone.glb");
 
 function NextItem(){
-      index = index++%count
+      index = (++index)%count
       let model = "src/assets/models/"+items[index];
       console.log("Set Model To: "+model)
       bok.setAttribute("gltf-model",model);
