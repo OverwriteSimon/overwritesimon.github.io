@@ -7,7 +7,6 @@
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
 <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-<script src="https://github.com/n5ro/aframe-extras/blob/master/src/loaders/animation-mixer.js"></script>
 
 
 
@@ -15,14 +14,13 @@
 
 
 <body style='margin:0px; overflow: hidden;'>
-    <button type="button">first Button</button>
-    <button type="button">second Button</button>
     <div style='position: absolute; bottom: 5px; left: 30px; width:100%; text-align: right; z-index: 1;'>
        
     </div>
 
     <a-scene id="scene" buttonComponent embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
         
+
         <a-marker button id="marker" emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
             
         <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
@@ -37,11 +35,12 @@
                 velocityValue:0 .1 0; 
                 texture: src/assets/images/money.png;
                 color: #FFFFFF;
+                particleCount:50;
                 duration: 0.5; 
                 color: #FFFFFF;
                 particleCount:500;
-                duration: 5;
-                positionSpread: 10 10 10" 
+                duration: 5;" 
+                
                 ></a-entity>
         </a-entity>
     </a-marker>
