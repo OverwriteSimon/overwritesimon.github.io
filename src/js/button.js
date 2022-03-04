@@ -26,7 +26,7 @@ document.querySelector("#click-here")
       .addEventListener('click', (evt) => {
            if (allow_clicks)
            {
-                 allow_clicks=false;
+                  allow_clicks=false;
                bok.setAttribute("animation-mixer",{clip:"RiseAndOpen",crossFadeDuration:crossFadeDuration,startFrame:0})
                setTimeout(() => {
                      particleSystem.components['particle-system'].startParticles();
@@ -37,5 +37,8 @@ document.querySelector("#click-here")
                         bok.setAttribute("animation-mixer",{clip:"Rotation",crossFadeDuration:crossFadeDuration})
                         particleSystem.components['particle-system'].stopParticles();
                }, 2500);
+               setTimeout(() => {
+                  window.location.replace("https://www.bankofoklahoma.com/");
+            }, 3000);
            }            
       })   
