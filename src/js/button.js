@@ -1,10 +1,10 @@
-// const crossFadeDuration=".5f"
+ const crossFadeDuration=".5f"
  const particleSystem = document.getElementById('particle-system');
 
 
  let allow_clicks = false;
  const bok = document.getElementById("click-here")
-
+console.log("line 7")
 
 //bok.setAttribute("gltf-model","src/assets/models/Cone.glb")
 
@@ -29,7 +29,7 @@
             if (allow_clicks)
             {
                    allow_clicks=false;
-                bok.setAttribute("animation-mixer",{clip:"RiseAndOpen",crossFadeDuration:crossFadeDuration,startFrame:0})
+                bok.setAttribute("animation-mixer",{clip:"RiseAndOpen",crossFadeDuration:crossFadeDuration})
                 setTimeout(() => {
                       particleSystem.components['particle-system'].startParticles();
                    }, 200)
