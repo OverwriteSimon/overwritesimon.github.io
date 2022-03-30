@@ -24,7 +24,7 @@ console.log("line 7")
        }) 
 
 //if the briefcase is  clicked
- document.querySelector("#click-here")
+ document.querySelector("#briefcase")
        .addEventListener('click', (evt) => {
             if (allow_clicks)
             {
