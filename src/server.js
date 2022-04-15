@@ -1,8 +1,8 @@
 const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
-const postCharge = require('./stripe')
 require('dotenv').config()
+const postCharge = require('./stripe')
 
 const app = express()
 const router = express.Router()
@@ -12,7 +12,6 @@ router.post('/stripe/charge', postCharge)
 router.all('*', (_, res) =>
   res.json({ message: 'please make a POST request to /stripe/charge' })
 )
-
 app.use((_, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
   res.header(
