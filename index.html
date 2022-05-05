@@ -8,7 +8,8 @@
     <body>
       <a-scene mindar-image="imageTargetSrc: ./src/image-targets/berry.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
-            <a-asset-item id="yellow" src="./src/models/yellow flower.glb"></a-asset-item>
+          <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
+          <a-asset-item id="yellow" src="./src/models/yellow flower.glb"></a-asset-item>
             <img id="card" src="./src/images/heart.png" />
             <a-asset-item id="heart" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
         </a-assets>
@@ -16,26 +17,10 @@
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
           <a-entity mindar-image-target="targetIndex: 0">
           <!-- Define objects you want to appear above this image target below-->
-          <a-entity>
-            <a-entity scale = "5 5 5" position="0 2 0" rotation="-60 0 0" text="value: Happy Mother's Day; align: center;"></a-entity>
-            <a-entity scale = "3 3 3" position="0 1 2"rotation="-60 0 0" text="value: I can never repay you for what you've done for me thorughout my life, but I hope these flowers can bring you some joy today and for many after. I love you.; align: center;"></a-entity>
-            <a-entity animation="property:rotation; to:0 360 0;dur:10000;loop:true">
-                <a-entity 
-                    gltf-model="#yellow"
-                    animation="
-                        property: position;
-                        from: 0 0 -0.5;
-                        to:0 .5 -0.5; 
-                        dur: 2000; 
-                        dir: alternate; 
-                        easing: easeInOutSine; 
-                        loop: true">
-                </a-entity>
-            </a-entity>
-            <a-plane rotation="-90 0 0" width="4" height="4" color="#0F0000"></a-plane>
+          <a-box></a-box>
+          <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+          <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
       
-        </a-entity>
-          
           </a-entity>
       </a-scene>
     </body>
