@@ -1,19 +1,22 @@
-<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: engine-room-vr-logo-target.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <img id="card" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/image-tracking/assets/card-example/card.png" />
+        <a-asset-item id="avatarModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/image-tracking/assets/card-example/softmind/scene.gltf"></a-asset-item>
+      </a-assets>
 
-
-<table class="fancy" style="width:in;"><tr>
-	<td><a href="bok-banner.html"></a></td>
-	<td class="tableText"><a href="bok-banner.html">Bok Banner Demo</a>
-	<p>A briefcase that rotates in front of a banner. when clicked opens up partner link.</p></td>
-</tr></table>
-<table class="fancy" style="width:in;"><tr>
-	<td><a href="bok-nameplate.html"></a></td>
-	<td class="tableText"><a href="bok-nameplate.html">Bok Nameplate Demo</a>
-	<p>A briefcase rotating over a qr nameplate. </p></td>
-</tr></table>
-<table class="fancy" style="width:in;"><tr>
-	<td><a href="product-catalog.html"></a></td>
-	<td class="tableText"><a href="product-catalog.html">Product Catalog Sample</a>
-	<p>Cycle through a product catalog, maybe in a brocure. </p></td>
-</tr></table>
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+        <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+      </a-entity>
+    </a-scene>
+  </body>
 </html>
