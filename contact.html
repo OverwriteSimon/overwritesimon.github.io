@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<header style="background-color: antiquewhite;">
+    <div id="logo"></div>
+    <nav>
+    <ul>
+    <li><a href="/">Home</a></li>
+    <!-- <li><a href="/link">Page</a></li>-->
+    </ul>
+    </nav></header>
+    <article style="background-color: aliceblue;text-align: center;">
+    <h2>Contact Me</h2>
+    <p>Do you have a request? Ask below, and I will reach back as soon as I can!</p>
+    </article>
+    <footer>
+    <html>
+<head >
+    <title >Contact Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/email.js"></script>
+</head>
+<body style="background-color: aquamarine;text-align: center">
+    <div style="margin: auto;width:240px;background-color:bisque;border-radius:10px;padding: 20px;align-self:center;">
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+        <label>Name</label>
+        <input type="text" name="from_name">
+        <label for="form-subject">Choose a topic:</label>
+        <select name="form-subject" id="form-subject">
+          <option value="Website">Website</option>
+          <option value="VR_AR">Virtual/Augmented Reality</option>
+          <option value="Smart Home">Smart Home Design</option>
+        </select>
+        <label>Email</label>
+        <input type="email" name="from_email">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <input type="submit" value="Send">
+    </form>
+</div>
+</body>
+</html>
+
+    </footer>
