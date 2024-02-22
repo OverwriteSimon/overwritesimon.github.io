@@ -1,62 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sim of Stardust Incorporated</title>
-  </head>
-  <body>
-    <canvas id="bg"></canvas>
-    <main>
-      <header>
-        <h1>Sim McElroy</h1>
-        <h3>AR/VR Developer</h3>
-        <address class="address"><a href="mailto:overwritesimon@gmail.com">Contact me</a></address>
-        <p>I'm a computer programmer who finds interest in the virtual/augmented reality space!</p>
+
+<meta charset="UTF-8">
+<META http-equiv="x-ua-cOMPATIBLE" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Personal Portfolio Website Design | Codehal</title>
+
+<!-- box icons -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- custom css -->
+<link rel="stylesheet" href="css/style.css">
+
+<script src="header.html"></script>
+
+<body>
+    <!-- header design -->
+    <header class="header">
+        <button onclick="window.location.href='destination.html';">Click Me!</button>
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home"class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-
-
-
-    <section class = "light">
-      <h1> Last Full Time Work - VR Programmer </h1>
-      <h3> Engine Room VR (November 2021 - November 2023)</h3>
-      <p> A Virtual Reality boxing application, designed for fitness and capturing a realistic boxing feel for health and conditioning &emsp; <a href="https://github.com/6gav/StepCounter">Repo</a></p>
-      <p><a href="https://engineroomvr.com/">Engine Room Website</a> - Learn more about the Engine Room team here.</p>
-      <h2> Primary Contributions </h2>
-      <p>- Gameplay Programming</p>
-      <p>- Physics Tuning</p>
-      <p>- Core Multiplayer framing</p>
-      <p>- User testing/experience collection</p>
-      <h2> Stories/Scripts </h2>
-      <p><a href="https://www.twitch.tv/ovrwritten">oVRwritten</a> - the cyberpunk feline. He's a vengeful hacker, disguised as a gamer and twitch streamer</p>
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi!, My name is</h3>
+            <h1>Sabian McElroy</h1>
+            <h3>Call me <span>Sim</span></h3>
+            <h3>I'm a <span class="multiple-text"></span></h3>
+            <p>Hi! Thanks for checking out my Portfolio. I am a Graduate of Full Sail University with a Bachelor's of Science in Software Development. I have worked on many various projects, such as working as a full stack web developer, working as an indie C++ programmer, and a professional virtual reality programmer.</p>
+            
+            <div class="social-media">
+                <!--<a href="#"><i class='bx bxl-facebook' ></i></a>-->
+                <a href="https://twitter.com/CrimDeeLive"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/overwritten_cd/"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://www.linkedin.com/in/sim-mcelroy-026b65152"><i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+            <a href="files/Sabian Computer Science 2024.pdf" class="btn" download="Sabian McElroy Resume">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="Images/Sabian/IMG_7626.JPG" alt=""/>
+        </div>
     </section>
 
-    <section class = "light">
-      <h1> Projects </h1>
-      <h3> StepCounter </h3>
-      <p> A mobile app that would track the number of steps a user would take throughout their day. Users on the app had a profile stored in integrated Firebase API, which allowed users to customize an avatar and share achievements with friends &emsp; <a href="https://github.com/6gav/StepCounter">Repo</a></p>
-      <p><a href="https://github.com/6gav/FinalProject">Degas Game of war</a> - Web based simulation of cells that would fight to the finish.</p>
-      <h2> Technical Skills </h2>
-      <p>Unit Testing</p>
-      <h2> Stories/Scripts </h2>
-      <p><a href="https://www.twitch.tv/ovrwritten">oVRwritten</a> - the cyberpunk feline. By day, he's a twitch steamer playing video games, with a vengeful past as a hacker.</p>
-    </section>
-    
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="Images/WIP/OIG4 (1).jpg"/>
+        </div>
 
-    <section>
-      <h2>Education</h2>
-      <h2>Full Sail University(June 2019) </h2>
-      <p>Bachelor of Science in Software Development</p>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Software Developer</h3>
+            <p>
+                I have been an inspired programmer since 2012, 
+                when I went to my first tech convention, 
+                Students Involved with Technology (SIT). 
+                I like to spend my free time gaming, 
+                exploring the outdoors when I can, and cooking.
+            </p>
+            <a href="#" class="btn">Read More</a>
+        
+            </div>
     </section>
 
-    <blockquote>
-      <p>The best way out is always through <br>-Robert Frost</p>
-    </blockquote>
-    </main>
-    <script type="module" src="/js/main.js"></script>
-    
-  </body>
-  
+    <!-- services section design -->
+    <section class="services" id="services">
+        <h2 class="heading">My <span>Work</span></h2>
+
+        <div class="services-container">
+            <div class="services-box"><i class='bx bxl-meta' ></i>
+                <h3>Virtual Reality Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque fuga sequi labore quas praesentium delectus et illum magni asperiores maiores voluptatem quia nihil reprehenderit, officiis ratione commodi rem? Velit.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bx-code-alt' ></i>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque fuga sequi labore quas praesentium delectus et illum magni asperiores maiores voluptatem quia nihil reprehenderit, officiis ratione commodi rem? Velit.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-c-plus-plus' ></i>
+                <h3>C++ Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam atque fuga sequi labore quas praesentium delectus et illum magni asperiores maiores voluptatem quia nihil reprehenderit, officiis ratione commodi rem? Velit.</p>
+                <a href="CppDeveloper.html" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="Images/Engine Room VR/EngineRoomVR.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>VR Developer</h4>
+                    <p>I worked as a member of Engine Room VR, a vr game development startup founded by The Engine Room, a boxing gym backed by the Golden Gloves boxing organization. We created a virtual gym and boxing opponents for users to practice and train like a real fighter. Golden Gloves VR launched on Meta Quest Christmas of 2022.</p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="Images/Engine Room VR/Augmented Reality.PNG" alt="">
+                <div class="portfolio-layer">
+                    <h4>Web Developer</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto alias, voluptates aperiam sunt cupiditate, quod, veritatis pariatur voluptas culpa blanditiis! Quisquam, doloribus molestias. Vitae aliquid id ipsum voluptatum laudantium!</p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="Images/WIP/OIG2.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Python Developer</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto alias, voluptates aperiam sunt cupiditate, quod, veritatis pariatur voluptas culpa blanditiis! Quisquam, doloribus molestias. Vitae aliquid id ipsum voluptatum laudantium!</p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="Images/WIP/OIG4 (1).jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>C++ Programmer</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate architecto alias, voluptates aperiam sunt cupiditate, quod, veritatis pariatur voluptas culpa blanditiis! Quisquam, doloribus molestias. Vitae aliquid id ipsum voluptatum laudantium!</p>
+                    <a href="#"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class=""heading>Contact <span>Me!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p> Copyright &copy; by Ritten | All Rights Reserved.</p>
+        </div>
+        
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Typed JS-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+</body>
 </html>
