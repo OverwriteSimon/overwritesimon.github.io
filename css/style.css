@@ -30,7 +30,6 @@ body{
 }
 
 section{
-    min-height: 100vh;
     padding: 10rem 9% 2rem;
     /* Todo: section size not changing demonstrated in video at 13:00*/
 }
@@ -157,7 +156,6 @@ span{
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
-    color: #070204;
 }
 .btn:hover {
     box-shadow: none;
