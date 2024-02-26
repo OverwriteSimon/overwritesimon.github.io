@@ -97,6 +97,7 @@ section{
 }
 span{
     color: var(--main-color);
+    text-shadow: -1px -1px 0 #ffffff4d, 1px -1px 0 #ffffff4d, -1px 1px 0 #ffffff4d, 1px 1px 0 #ffffff4d;
 }
 
 .home-content h1{
@@ -156,6 +157,7 @@ span{
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
+    color: #070204;
 }
 .btn:hover {
     box-shadow: none;
@@ -383,8 +385,17 @@ span{
 }
 
 
-/* BREAKPOINTS */
+.engineroomvr-image-section{
+    padding: 5px;
+}
+.engineroomvr-image{
+    display: inline-block;
+    margin: auto;
+    width: 24%;
+}
 
+
+/* BREAKPOINTS */
 @media (max-width: 1200px) {
     html{
         font-size: 55%;
@@ -479,6 +490,12 @@ span{
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .page-content{
+        display: inline-block;
+        text-align: center;
+    }
+    
 }
 
 
