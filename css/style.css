@@ -33,6 +33,15 @@ section{
     padding: 10rem 9% 2rem;
     /* Todo: section size not changing demonstrated in video at 13:00*/
 }
+.content-listitem{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.content-listitem2{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+}
 
 .header{
     position: fixed;
@@ -96,7 +105,7 @@ section{
 }
 span{
     color: var(--main-color);
-    text-shadow: -1px -1px 0 #ffffff4d, 1px -1px 0 #ffffff4d, -1px 1px 0 #ffffff4d, 1px 1px 0 #ffffff4d;
+    text-shadow: -1px -1px 0 #ffffff1e, 1px -1px 0 #ffffff1e, -1px 1px 0 #ffffff1e, 1px 1px 0 #ffffff1e;
 }
 
 .home-content h1{
